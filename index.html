@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Nexos — Pare de perder dinheiro com gestão bagunçada</title>
-  <meta name="description" content="Acabe com a bagunça financeira do seu MEI. Controle de verdade: fluxo de caixa, estoque e vendas. Teste sem pagar nada.">
+  <title>Nexos — Gestão completa para MEI e pequenas empresas</title>
+  <meta name="description" content="Fluxo de caixa, estoque, PDV e clientes em um só lugar. Acesse do celular, funciona offline. Grátis para começar — sem cartão.">
   <meta name="keywords" content="sistema gestão MEI, ERP pequenas empresas, controle financeiro MEI, PDV grátis, controle estoque, Nexos ERP">
   <link rel="canonical" href="https://lp-nexos.vercel.app/">
-  <meta property="og:title" content="Nexos — Pare de perder dinheiro por falta de controle">
-  <meta property="og:description" content="Acabe com a ansiedade financeira. Controle total do seu MEI. Teste grátis sem cartão.">
+  <meta property="og:title" content="Nexos — Gestão completa para MEI e pequenas empresas">
+  <meta property="og:description" content="Fluxo de caixa, estoque, PDV e clientes em um só lugar. Grátis para começar.">
   <meta property="og:url" content="https://lp-nexos.vercel.app/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://nexos-erp-blush.vercel.app/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,7 +60,69 @@
       background: linear-gradient(135deg, var(--azul-dark), var(--azul));
       display: flex; align-items: center; justify-content: center;
     }
-    .nav-name { font-size: 1.15rem; font-weight: 800; color: var(--azul-dark); letter-spacing: -0.3px; }
+    .nav-name { font-family: 'Barlow', sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--azul-dark); letter-spacing: .12em; text-transform: uppercase; }
+
+    /* ─── TRUST BAR ───────────────────────── */
+    .trust-bar {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 5%;
+      display: flex; align-items: center; justify-content: center;
+      gap: 28px; flex-wrap: wrap;
+      font-size: .78rem; color: var(--text-muted); font-weight: 500;
+    }
+    .trust-item { display: flex; align-items: center; gap: 7px; }
+    .trust-item strong { color: var(--azul-dark); }
+
+    /* ─── SOCIAL PROOF STRIP ──────────────── */
+    .social-strip {
+      background: linear-gradient(135deg, var(--azul-deep), #0a2d5e);
+      padding: 28px 5%;
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap; text-align: center;
+    }
+    .social-num { color: white; }
+    .social-num .n { font-size: 2rem; font-weight: 800; font-family: 'DM Mono', monospace; letter-spacing: -1px; }
+    .social-num .l { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 2px; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+
+    /* ─── SECURITY SECTION ────────────────── */
+    .security-section { background: #f0f7ff; }
+    .security-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 16px; margin-top: 0;
+    }
+    .security-card {
+      background: white; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .security-icon {
+      width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(80,169,251,.12), rgba(26,111,189,.06));
+      border: 1px solid rgba(80,169,251,.2);
+      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+    }
+    .security-card h4 { font-size: .88rem; font-weight: 700; color: var(--azul-deep); margin-bottom: 4px; }
+    .security-card p  { font-size: .78rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ─── FAQ ─────────────────────────────── */
+    .faq-section { background: white; }
+    .faq-list { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left;
+      font-family: 'DM Sans', sans-serif; font-size: .92rem; font-weight: 700;
+      color: var(--azul-deep); padding: 18px 0;
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; gap: 12px;
+    }
+    .faq-q .arrow { font-size: .8rem; color: var(--azul-dark); transition: transform .2s; flex-shrink: 0; }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { font-size: .85rem; color: var(--text-muted); line-height: 1.65; padding: 0 0 16px; display: none; }
+    .faq-a.open { display: block; }
     .nav-cta {
       background: var(--azul-dark); color: white;
       padding: 9px 22px; border-radius: 999px; font-size: 0.88rem; font-weight: 700;
@@ -424,6 +486,9 @@
       .fab-cta { display: flex; align-items: center; justify-content: center; gap: 8px; }
       body { padding-bottom: 80px; }
       .cta-section { padding-bottom: 80px; }
+      .nav-links-desktop { display: none !important; }
+      .trust-bar { gap: 14px; }
+      .social-strip { gap: 24px; }
     }
     @media (min-width: 701px) {
       .fab-cta { display: none; }
@@ -446,32 +511,38 @@
             <stop offset="100%" stop-color="#93c5fd"/>
           </linearGradient>
         </defs>
-        <!-- Arco externo -->
         <path d="M 100 22 A 78 78 0 1 1 34 156" fill="none" stroke="url(#lpa)" stroke-width="18" stroke-linecap="round"/>
-        <!-- Seta interna -->
         <path d="M 100 58 L 136 100 L 100 142" fill="none" stroke="url(#lpb)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- Ponto acento -->
         <circle cx="52" cy="162" r="10" fill="white" opacity=".5"/>
       </svg>
     </div>
     <span class="nav-name">Nexos</span>
   </div>
   <div style="display:flex;gap:24px;align-items:center">
-    <a href="#demo" style="font-size:.85rem;font-weight:500;color:#4a6080;text-decoration:none;display:none" class="nav-link-item">Funcionalidades</a>
-    <a href="#planos" style="font-size:.85rem;font-weight:500;color:#4a6080;text-decoration:none;display:none" class="nav-link-item">Preços</a>
+    <a href="#demo" style="font-size:.85rem;font-weight:500;color:#4a6080;text-decoration:none;padding:8px 4px">Funcionalidades</a>
+    <a href="#planos" style="font-size:.85rem;font-weight:500;color:#4a6080;text-decoration:none;padding:8px 4px">Preços</a>
     <a href="https://nexos-erp-blush.vercel.app/" style="font-size:.85rem;font-weight:600;color:#1a6fbd;text-decoration:none;padding:8px 14px">Entrar</a>
-    <a href="https://nexos-erp-blush.vercel.app/?trial=true" class="nav-cta">Testar sem pagar nada →</a>
+    <a href="https://nexos-erp-blush.vercel.app/?trial=true" class="nav-cta">Testar grátis →</a>
   </div>
 </nav>
 
+<!-- TRUST BAR -->
+<div class="trust-bar" style="margin-top:64px">
+  <div class="trust-item">🔒 <strong>Dados criptografados</strong></div>
+  <div class="trust-item">☁️ <strong>Backup diário automático</strong></div>
+  <div class="trust-item">📱 <strong>Funciona offline</strong></div>
+  <div class="trust-item">✅ <strong>Conformidade LGPD</strong></div>
+  <div class="trust-item">⚡ <strong>Sem instalação</strong></div>
+</div>
+
 <a href="https://nexos-erp-blush.vercel.app/?trial=true" class="fab-cta">✨ Testar sem pagar nada</a>
 
-<!-- HERO COM HEADLINE FORTE E DOR REAL DO MEI -->
-<div class="hero">
+<!-- HERO -->
+<div class="hero" style="padding-top:60px">
   <div>
-    <div class="hero-tag">🚨 Sua bagunça financeira tem solução</div>
-    <h1>Pare de perder dinheiro<br>por <span>falta de controle</span></h1>
-    <p>Dinheiro que some, estoque bagunçado, vendas no papel, ansiedade no fim do mês.<br>O Nexos organiza seu MEI de verdade — e você dorme tranquilo.</p>
+    <div class="hero-tag">✦ Gestão completa para MEI e pequenas empresas</div>
+    <h1>Controle financeiro,<br>estoque e vendas <span>em um só lugar</span></h1>
+    <p>Fluxo de caixa em tempo real, PDV na palma da mão, alertas de estoque automáticos. Tudo sincronizado na nuvem — acesse de qualquer dispositivo, até offline.</p>
 
     <div class="hero-btns">
       <a href="https://nexos-erp-blush.vercel.app/?trial=true" class="btn-hero btn-hero-primary">✨ Testar sem pagar nada →</a>
@@ -519,7 +590,13 @@
   </div>
 </div>
 
-<!-- ⚠️ PROVA SOCIAL GENÉRICA FOI REMOVIDA COMPLETAMENTE (como você pediu) -->
+<!-- NÚMEROS REAIS -->
+<div class="social-strip">
+  <div class="social-num"><div class="n">+8</div><div class="l">Empresas ativas</div></div>
+  <div class="social-num"><div class="n">R$ 0</div><div class="l">Para começar</div></div>
+  <div class="social-num"><div class="n">30s</div><div class="l">Para criar sua conta</div></div>
+  <div class="social-num"><div class="n">100%</div><div class="l">Na nuvem</div></div>
+</div>
 
 <!-- FEATURES (REESCRITAS COM DOR E TRANSFORMAÇÃO) -->
 <section class="features-bg" id="demo">
@@ -588,6 +665,59 @@
   </div>
 </section>
 
+<!-- SEGURANÇA E CONFIANÇA -->
+<section class="security-section" id="seguranca">
+  <div style="text-align:center;margin-bottom:40px">
+    <div class="section-tag">Segurança e confiança</div>
+    <h2 class="section-title">Seus dados protegidos<br><span>como em um banco</span></h2>
+    <p class="section-sub" style="margin:0 auto">Nenhuma empresa coloca seus dados financeiros em qualquer sistema. Saiba como protegemos os seus.</p>
+  </div>
+  <div class="security-grid">
+    <div class="security-card">
+      <div class="security-icon">🔒</div>
+      <div>
+        <h4>Criptografia TLS</h4>
+        <p>Todos os dados trafegam com criptografia de ponta a ponta. Nenhuma informação viaja em texto aberto.</p>
+      </div>
+    </div>
+    <div class="security-card">
+      <div class="security-icon">🏢</div>
+      <div>
+        <h4>Isolamento por empresa</h4>
+        <p>Cada empresa vê apenas seus próprios dados. Row-Level Security ativo em todas as tabelas.</p>
+      </div>
+    </div>
+    <div class="security-card">
+      <div class="security-icon">☁️</div>
+      <div>
+        <h4>Backup diário automático</h4>
+        <p>Seus dados são copiados automaticamente todo dia. Nunca perca uma venda, produto ou lançamento.</p>
+      </div>
+    </div>
+    <div class="security-card">
+      <div class="security-icon">📋</div>
+      <div>
+        <h4>Conformidade LGPD</h4>
+        <p>Operamos em conformidade com a Lei Geral de Proteção de Dados. Você pode solicitar exportação ou exclusão dos seus dados a qualquer momento.</p>
+      </div>
+    </div>
+    <div class="security-card">
+      <div class="security-icon">⚡</div>
+      <div>
+        <h4>99,9% de disponibilidade</h4>
+        <p>Infraestrutura na Vercel + Supabase com SLA de uptime. Seu negócio não para por problema técnico.</p>
+      </div>
+    </div>
+    <div class="security-card">
+      <div class="security-icon">📱</div>
+      <div>
+        <h4>Funciona offline</h4>
+        <p>App PWA instalável no celular. Consulte dados e registre vendas mesmo sem internet — sincroniza ao reconectar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PLANOS (CTA do FREE alterado para "Testar sem pagar nada") -->
 <section class="plans-bg" id="planos">
   <div style="text-align:center;margin-bottom:48px">
@@ -642,12 +772,58 @@
   </div>
 </section>
 
-<!-- CTA FINAL COM NOVO TEXTO -->
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div style="text-align:center;margin-bottom:40px">
+    <div class="section-tag">Dúvidas frequentes</div>
+    <h2 class="section-title">Perguntas que <span>todo mundo faz</span></h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Preciso instalar alguma coisa? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">Não. O Nexos roda direto no navegador — Chrome, Safari, Firefox. Você também pode instalar como app no celular (PWA) com um clique, sem precisar de loja de aplicativos.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        O plano gratuito tem limite de tempo? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">Não. O plano Free é permanente, sem prazo de expiração. Você usa enquanto quiser, sem pagar nada. Só faz upgrade quando precisar de recursos avançados.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Meus dados ficam seguros? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">Sim. Todos os dados são criptografados, isolados por empresa (nenhuma empresa vê dados de outra) e armazenados com backup diário automático. Operamos em conformidade com a LGPD.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Posso usar no celular? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">Sim. O Nexos é totalmente responsivo e pode ser instalado como app nativo no Android e iOS. Funciona inclusive offline — registre vendas sem internet e sincroniza quando conectar.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Posso cancelar a qualquer momento? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">Sim. Sem fidelidade, sem multa. Se cancelar um plano pago, o acesso continua até o fim do período já pago. Seus dados ficam disponíveis por 30 dias após o cancelamento para exportação.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Como funciona o suporte? <span class="arrow">▼</span>
+      </button>
+      <div class="faq-a">Plano Free: suporte por e-mail em até 48h. Planos Basic e Pro: suporte prioritário em até 4h. Enterprise: gestor de conta dedicado. Fale com a gente: <strong>contato@nexoserp.com.br</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
 <section class="cta-section">
-  <h2>Quer parar de perder dinheiro<br>e finalmente ter controle?</h2>
-  <p>Teste agora sem pagar nada. Sem cartão, sem susto. Se não gostar, é só cancelar.</p>
-  <a href="https://nexos-erp-blush.vercel.app/?trial=true" class="btn-cta">✨ Testar sem pagar nada →</a>
-  <p class="cta-note">Empresas como a sua já organizaram a gestão com o Nexos</p>
+  <h2>Comece agora.<br>É grátis e leva 30 segundos.</h2>
+  <p>Sem cartão de crédito. Sem prazo. Sem risco.<br>Só você e o controle do seu negócio.</p>
+  <a href="https://nexos-erp-blush.vercel.app/?trial=true" class="btn-cta">✨ Criar conta grátis →</a>
+  <p class="cta-note">Já disponível para Android, iOS e desktop · Funciona offline</p>
 </section>
 
 <!-- FOOTER (E-MAIL ATUALIZADO) -->
@@ -719,5 +895,19 @@
   </div>
 </div>
 
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  // Fechar todos
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  // Abrir o clicado (se estava fechado)
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+</script>
 </body>
 </html>
